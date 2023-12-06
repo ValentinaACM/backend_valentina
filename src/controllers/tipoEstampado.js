@@ -27,7 +27,7 @@ const postTipoEstampado = async (req, res) => {
 };
 
 const putTipoEstampado = async (req, res) => {
-  const { _id, tamano, tipo, precioTamano, precioTipo, total } =
+  const { _id, tamano, tipo, precioTamano, precioTipo, prcioDolar, total } =
     req.body;
   try {
     const tipoEstampado = await TipoEstampado.findOneAndUpdate(
@@ -37,6 +37,7 @@ const putTipoEstampado = async (req, res) => {
         tipo: tipo,
         precioTamano: precioTamano,
         precioTipo: precioTipo,
+        precioDolar: prcioDolar,
         total: total,
       }
     ); //las primeras llaves son el valor por el cual voy a hacer la modificacion el segundo hace referencia a lo que el usuario envio

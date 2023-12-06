@@ -19,6 +19,10 @@ const TipoEstampadoSchema = {
     type: Number,
     required: [true, "El precio del tipo del estampado es requerido"],
   },
+  precioDolar: {
+    type: Number,
+    required: [true, "El precio del dolar es requerido"],
+  },
   total: {
     type: Number,
     required: [true, "El total es requerido"],
